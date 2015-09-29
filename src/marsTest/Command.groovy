@@ -10,7 +10,7 @@ public class Command {
 		URL url = new URL(uri);
 		HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 		connection.setRequestMethod("GET");
-		connection.setRequestProperty("Accept", "application/jdon");
+		connection.setRequestProperty("Accept", "application/json");
 		
 		BufferedReader br = new BufferedReader(new InputStreamReader((connection.getInputStream())));
 		String output = br.readLine().split(":")[1].replace("}", "").replace("\"", "");
